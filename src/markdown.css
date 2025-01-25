@@ -1,0 +1,172 @@
+@import 'prismjs/themes/prism-tomorrow.css';
+
+.markdown-container {
+	--hr-border: hsl(var(--border) / var(--tw-bg-opacity, 1));
+	--link-text: #3b82f6;
+	--badge-bg: hsl(var(--secondary) / var(--tw-bg-opacity, 1));
+
+	--code-border: rgba(211, 211, 211, 0.639);
+	--code-text: #abb2bf;
+	--code-bg: #282c34;
+	--code-keyword: #c678dd;
+	--code-string: #98c379;
+	--code-number: #d19a66;
+	--code-function: #61afef;
+	--code-comment: #5c6370;
+	--code-operator: #56b6c2;
+	--code-punctuation: #56b6c2;
+	--code-constant: #e5c07b;
+	--code-builtin: #56b6c2;
+	--code-interpolation: #d19a66;
+	--code-class-name: #e06c75;
+
+	font-family: 'Space Mono', monospace;
+	font-size: 14px;
+
+	overflow-y: auto !important;
+}
+.markdown-container code[class*='language-'],
+.markdown-container pre[class*='language-'] {
+	overflow-x: auto;
+	min-width: 0px;
+	color: var(--code-text);
+}
+
+.markdown-container pre[class*='language-'] {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.markdown-container .token.selector,
+.token.important,
+.token.atrule,
+.token.keyword {
+	color: var(--code-keyword);
+}
+
+.markdown-container .token.punctuation {
+	color: var(--code-punctuation);
+}
+
+.markdown-container .token.string {
+	color: var(--code-string);
+}
+
+.markdown-container .token.function {
+	color: var(--code-function);
+}
+
+.markdown-container .token.comment {
+	color: var(--code-comment);
+}
+
+.markdown-container .token.token.builtin {
+	color: var(--code-builtin);
+}
+
+.markdown-container .token.token.number {
+	color: var(--code-number);
+}
+
+.markdown-container .token.token.constant {
+	color: var(--code-constant);
+}
+
+.markdown-container .token.token.operator {
+	color: var(--code-operator);
+}
+.markdown-container .token.token.interpolation {
+	color: var(--code-interpolation);
+}
+
+.markdown-container .token.token.class-name {
+	color: var(--code-function);
+}
+
+.markdown-container h1,
+.markdown-container h2,
+.markdown-container h3 {
+	margin-bottom: 0.45em;
+	margin-top: 0.45em;
+	font-weight: 900;
+}
+
+.markdown-container h1 {
+	font-size: 2em;
+}
+
+.markdown-container h2 {
+	font-size: 1.8em;
+}
+
+.markdown-container h3 {
+	font-size: 1.6em;
+}
+
+.markdown-container h4 {
+	font-size: 1.45em;
+}
+
+.markdown-container h5 {
+	font-size: 1.3em;
+}
+
+.markdown-container h6 {
+	font-size: 1.2em;
+}
+
+.markdown-container p {
+	line-height: 1.75rem;
+}
+
+.markdown-container ul {
+	margin: 0;
+	padding: 0 20px;
+}
+
+.markdown-container li {
+	padding: 5px 0px;
+	line-height: 1.75rem;
+	list-style-type: disc;
+}
+
+.markdown-container a {
+	color: var(--link-text);
+}
+
+.markdown-container :is(code):not(pre code) {
+	color: var(--link-text);
+	background-color: var(--badge-bg);
+	padding: 1px 6px;
+	border-radius: 0.25em;
+}
+
+.markdown-container :not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+	background-color: var(--code-bg);
+	border: 1px solid var(--code-border);
+	border-radius: 0.25em;
+	font-size: 0.9em;
+}
+
+markdown a :is(code):not(pre code) {
+	color: inherit;
+}
+
+.markdown-container blockquote {
+	padding: 5px 20px;
+	background-color: var(--badge-bg);
+	border: 1px solid var(--hr-border);
+	margin-right: 0px;
+	margin-left: 0px;
+	border-radius: 0.25em;
+
+	strong {
+		font-style: normal;
+	}
+}
+.markdown-container hr {
+	border-top: 0.5px solid var(--hr-border);
+	color: var(--hr-border);
+	margin: 20px 0px;
+}
