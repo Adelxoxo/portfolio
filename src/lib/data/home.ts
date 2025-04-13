@@ -11,12 +11,12 @@ const hero: {
 } = {
 	title: `${BaseData.fullName},`,
 	description:
-		'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+		"Multilingual IT student, voice talent, and tinkerer with a passion for building tomorrow's solutions today.",
 	links: [
-		{ label: 'GitHub', href: 'https://github.com', icon: 'i-carbon-logo-github' },
-		{ label: 'LinkedIn', href: 'https://linkedin.com', icon: 'i-carbon-logo-linkedin' },
-		{ label: 'Twitter', href: 'https://twitter.com', icon: 'i-carbon-logo-twitter' },
-		{ label: 'Email', href: 'mailto:riadh.adrani@pm.me', icon: 'i-carbon-at' }
+		{ label: 'GitHub', href: 'https://github.com/Adelxoxo', icon: 'i-carbon-logo-github' },
+		{ label: 'CastingCallClub', href: 'https://www.castingcall.club/VoiceoverHangover', icon: 'i-carbon-microphone-filled' },
+		{ label: 'IMDb', href: 'https://www.imdb.com/name/nm12230813/', icon: 'i-carbon-theater' },
+		{ label: 'Email', href: 'mailto:adelkobic@gmail.com', icon: 'i-carbon-at' }
 	]
 };
 

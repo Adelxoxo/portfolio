@@ -69,7 +69,19 @@ const Assets = {
 	Jest: asset('jest.png'),
 	Unocss: asset('unocss.svg'),
 	Ruvy: asset('ruvy.svg'),
-	Postcss: asset('postcss.svg')
+	Postcss: asset('postcss.svg'),
+	Russian: asset('ru.svg'),
+	English: asset('us.svg'),
+	Bosnian: asset('ba.svg'),
+	German: asset('de.svg'),
+	Ukrainian: asset('ua.svg'),
+	VegasPro: asset('icon_veg.ico'),
+	Arduino: asset('arduino.svg'),
+	Esp32: asset('esp32devkit.svg'),
+	Espressif: asset('espressif-systems.svg'),
+	FLStudio: asset('flstudio.ico'),
+	Audacity: asset('audacity.svg'),
+	Voiceover: asset('microphone.jpg'),
 };
 
 export default Assets;
