@@ -1,28 +1,33 @@
-name: Build and Deploy
+name: portfolio
+
 on:
   push:
-    branches:
-      - master
-      - main
-permissions:
-  contents: write
+    branches: [master]
+  workflow_dispatch:
+
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+  deploy_menu_app_client:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
-
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm i
-          yarn build
-          touch build/.nojekyll
-          cp build/404.html build/index.html
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Checkout repository to actions runner
+        uses: actions/checkout@v4
+      - name: Setup nodeJS
+        uses: actions/setup-node@v3
         with:
-          folder: build # The folder the action should deploy.
-          branch: gh-pages
+          node-version: 22.11.0
+      - name: npm install
+        run: |
+          npm install
+      - name: npm run build
+        run: |
+          npm run build
+      - name: Deploy files to server
+        run: |
+          SSHOST=${{ vars.SERVER_IP }}
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          cd ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > sshkey.rsa
+          chmod 600 sshkey.rsa
+          rsync -rlgoDzvc -i --delete --exclude={'.git*'} --rsh "ssh -p 22 -i ~/.ssh/sshkey.rsa -o StrictHostKeyChecking=no" $GITHUB_WORKSPACE/dist/portfolio/ root@${SSHOST}:/home/portfolio
+          ssh -i ~/.ssh/sshkey.rsa -o StrictHostKeyChecking=no root@${SSHOST} "sudo systemctl restart nginx"
