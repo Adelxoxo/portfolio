@@ -29,5 +29,5 @@ jobs:
           cd ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > sshkey.rsa
           chmod 600 sshkey.rsa
-          rsync -rlgoDzvc -i --delete --exclude={'.git*'} --rsh "ssh -p 22 -i ~/.ssh/sshkey.rsa -o StrictHostKeyChecking=no" $GITHUB_WORKSPACE/dist/portfolio/ root@${SSHOST}:/home/portfolio
+          rsync -rlgoDzvc -i --delete --exclude={'.git*'} --rsh "ssh -p 22 -i ~/.ssh/sshkey.rsa -o StrictHostKeyChecking=no" $GITHUB_WORKSPACE/build root@${SSHOST}:/home/portfolio
           ssh -i ~/.ssh/sshkey.rsa -o StrictHostKeyChecking=no root@${SSHOST} "sudo systemctl restart nginx"
