@@ -19,6 +19,7 @@
 	);
 
 	const onSearch = (query: string) => (search = query);
+	
 </script>
 
 <SearchPage title={EducationData.title} {onSearch}>

@@ -1,24 +1,66 @@
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import sveltePreprocess from 'svelte-preprocess';
 
-const dev = process.env.NODE_ENV !== 'production';
-const base = dev ? '' : '/slick-portfolio-svelte-5';
+const base = '';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: vitePreprocess(),
-
-  kit: {
-    adapter: adapter({
-      pages: 'build',
-      assets: 'build',
-      fallback: 'index.html', // This becomes important for SPA mode
-      precompress: false
-    }),
-    paths: {
-      base: base
+	preprocess: sveltePreprocess(),
+	vitePlugin: {
+		inspector: {
+			showToggleButton: 'always'
+		}
+	},
+	kit: {
+		adapter: adapter({
+			fallback: '404.html'
+		}),
+		alias: {
+			$lib: './src/lib',
+			'@data': './src/lib/data',
+			'@components': './src/lib/components',
+			'@md': './src/lib/md',
+			'@stores': './src/lib/stores',
+			'@utils': './src/lib/utils'
+		},
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? base : ''
+		},
+    prerender: {
+      crawl: true,
+      entries: [
+        '/',  // Home page
+        '/skills',
+        '/skills/ba',
+        '/skills/eng',
+        '/skills/ger',
+        '/skills/ru',
+        '/skills/ua',
+        '/skills/voiceover',
+        '/skills/veg',
+        '/skills/flstudio',
+        '/skills/audacity',
+        '/skills/css',
+        '/skills/html',
+        '/projects',
+        '/projects/slick-portfolio-angular',  
+        '/projects/slick-portfolio-svelte',  
+        '/projects/arduino-based-volume-mixer',
+        '/projects/arduino-based-video-player',
+        '/projects/lora-based-wan-node',
+        '/projects/diy-macro-pad',
+        '/experience',
+        '/experience/open-sorcerer',
+        '/experience/software-freelance',
+        '/experience/software-freelance-junior',
+        '/education',
+        '/education/dummy-education-item',
+        '/education/dummy-education-item-2',
+        '/resume',
+        '/search'
+      ]
     }
-  }
+	}
 };
 
 export default config;
