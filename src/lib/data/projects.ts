@@ -89,11 +89,11 @@ const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'screen 1',
-				src: '/images/arduino1.jpg'
+				src: '/images/arduino1.webp'
 			},
 			{
 				label: '2',
-				src: '/images/arduino2.jpg'
+				src: '/images/arduino2.webp'
 			}
 		]
 	},
@@ -117,7 +117,7 @@ const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Still from the video',
-				src: '/images/arduinovlcplayer.jpg'
+				src: '/images/arduinovlcplayer.webp'
 			},
 		]
 	},
@@ -144,23 +144,23 @@ const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Assembled Node w/ Meshtastic',
-				src: '/images/lora1.jpg'
+				src: '/images/lora1.webp'
 			},
 			{
 				label: 'Internal view',
-				src: '/images/lora2.jpg'
+				src: '/images/lora2.webp'
 			},
 			{
 				label: 'Side view',
-				src: '/images/lora3.jpg'
+				src: '/images/lora3.webp'
 			},
 			{
 				label: 'LoRa Module',
-				src: '/images/lora4.jpg'
+				src: '/images/lora4.webp'
 			},
 			{
 				label: 'LoRa Module',
-				src: '/images/lora5.jpg'
+				src: '/images/lora5.webp'
 			}
 		]
 	},
@@ -171,7 +171,7 @@ const items: Array<Project> = [
 			"A budget-friendly customizable macro pad using an ESP32 and 2.8 inch touchscreen display. Sends commands to a computer through a Python interpreter, allowing programmable buttons to trigger keyboard shortcuts and automate workflows for content creation, productivity or any other use.",
 		shortDescription:
 			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
-		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
+		links: [{ to: 'https://github.com/', label: 'GitHub' }],
 		logo: Assets.Esp32,
 		name: 'DIY Macro Pad',
 		period: {
@@ -182,7 +182,7 @@ const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Front view',
-				src: '/images/macropad.jpg'
+				src: '/images/macropad.webp'
 			}
 		]
 	}
