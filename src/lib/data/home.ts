@@ -11,7 +11,7 @@ const hero: {
 } = {
 	title: `${BaseData.fullName},`,
 	description:
-		"Multilingual IT student, voice talent, and tinkerer with a passion for building tomorrow's solutions today.",
+		"Multilingual IT student, voiceover artist, and passionate tech enthusiast.",
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/Adelxoxo', icon: 'i-carbon-logo-github' },
 		{ label: 'CastingCallClub', href: 'https://www.castingcall.club/VoiceoverHangover', icon: 'i-carbon-microphone-filled' },
