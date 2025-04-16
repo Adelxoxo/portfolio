@@ -20,7 +20,7 @@ const hero: {
 	]
 };
 
-const carousel: Array<Skill> = getSkills();
+const carousel: Array<Skill> = getSkills().filter((skill) => skill.slug !== 'voiceover');
 
 const HomeData = {
 	title,
