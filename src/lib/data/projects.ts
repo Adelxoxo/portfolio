@@ -74,17 +74,15 @@ const items: Array<Project> = [
 		shortDescription:
 			'Physical Audio Control Interface with Real-Time Visualization',
 			links: [
-				{ to: 'https://github.com/', label: 'GitHub' },
-				{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'Repository' },
-				{ to: 'https://svelte.dev/', label: 'Svelte' },
-				{ to: 'https://www.shadcn-svelte.com/', label: 'Shadcn Svelte' }
+				{ to: 'https://github.com/omriharel/deej', label: 'DeeJ' },
+				{ to: 'https://github.com/Adelxoxo/', label: 'Repository' }
 			],
 		logo: Assets.Arduino,
 		name: 'Arduino Volume Mixer',
 		period: {
-			from: new Date()
+			from: new Date(2024, 7, 1),
 		},
-		skills: getSkills('diy'),
+		skills: getSkills('diy', 'cpp'),
 		type: 'DIY Project',
 		screenshots: [
 			{
@@ -110,9 +108,10 @@ const items: Array<Project> = [
 		logo: Assets.Arduino,
 		name: 'Arduino Video Player',
 		period: {
-			from: new Date()
+			from: new Date(2024, 9, 1),
+			to: new Date(2024, 9, 15)
 		},
-		skills: getSkills('diy'),
+		skills: getSkills('diy', 'cpp', 'python'),
 		type: 'DIY Project',
 		screenshots: [
 			{
@@ -134,12 +133,12 @@ const items: Array<Project> = [
 			{ to: 'https://meshtastic.org/', label: 'Meshtastic' },
 			{ to: 'https://www.espressif.com/en/products/socs/esp32', label: 'ESP32' }
 		],
-		logo: Assets.Esp32,
+		logo: Assets.Espressif,
 		name: 'LoRa-based WAN Node',
 		period: {
-			from: new Date()
+			from: new Date(2025, 1, 1)
 		},
-		skills: getSkills(''),
+		skills: getSkills('diy', 'cpp'),
 		type: 'DIY Project',
 		screenshots: [
 			{
@@ -171,13 +170,16 @@ const items: Array<Project> = [
 			"A budget-friendly customizable macro pad using an ESP32 and 2.8 inch touchscreen display. Sends commands to a computer through a Python interpreter, allowing programmable buttons to trigger keyboard shortcuts and automate workflows for content creation, productivity or any other use.",
 		shortDescription:
 			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
-		links: [{ to: 'https://github.com/', label: 'GitHub' }],
-		logo: Assets.Esp32,
+		links: [
+			{ to: 'https://github.com/', label: 'GitHub' },
+			{ to: 'https://www.espressif.com/en/products/socs/esp32', label: 'ESP32' }],
+		logo: Assets.Espressif,
 		name: 'DIY Macro Pad',
 		period: {
-			from: new Date()
+			from: new Date(2025, 2, 1),
+			to: new Date(2025, 2, 3)
 		},
-		skills: getSkills('svelte', 'ts', 'tailwind', 'sass'),
+		skills: getSkills('diy', 'cpp', 'python'),
 		type: 'DIY Project',
 		screenshots: [
 			{

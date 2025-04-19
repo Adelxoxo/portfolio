@@ -18,7 +18,9 @@ const categories = [
 	defineSkillCategory({ name: 'Dev Tools', slug: 'devtools' }),
 	defineSkillCategory({ name: 'Markup & Style', slug: 'markup-style' }),
 	defineSkillCategory({ name: 'Design', slug: 'design' }),
-	defineSkillCategory({ name: 'Soft Skills', slug: 'soft' })
+	defineSkillCategory({ name: 'Soft Skills', slug: 'soft' }),
+	defineSkillCategory({ name: 'Programming Languages', slug: 'programming-langs' }),
+	defineSkillCategory({ name: 'DIY', slug: 'diy' }),
 ] as const;
 
 const defineSkill = <S extends string>(
@@ -133,7 +135,7 @@ const items = [
 		slug: 'voiceover',
 		color: 'gray',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			"Voice over is the art of using one's voice to convey a message, emotion, or character in various media. It involves recording spoken content for applications like audiobooks, animations, video games, and commercials. My experience includes narration and voice acting for diverse projects.",
 		logo: Assets.Voiceover,
 		name: 'Voiceover',
 		category: 'av-production'
@@ -142,7 +144,7 @@ const items = [
 		slug: 'veg',
 		color: '#3c5af0',
 		description:
-			'Vegas Pro is a professional video editing software package for non-linear editing (NLE), designed to run on the Microsoft Windows operating system.',
+			'Vegas Pro is a professional video editing software package for non-linear editing (NLE), designed to run on the Microsoft Windows operating system. It is my primary tool for video editing, and allows me to produce high-quality videos as seen on the SlashedPixel YouTube channel.',
 		logo: Assets.VegasPro,
 		name: 'Vegas Pro',
 		category: 'av-production'
@@ -150,7 +152,7 @@ const items = [
 	defineSkill({
 		slug: 'flstudio',
 		color: 'orange',
-		description: "",
+		description: "FL Studio is a digital audio workstation (DAW) developed by Belgian company Image-Line. It is used for music production, audio editing, and mixing. I use FL Studio for applying vocal effects in post-production if analog effects are unavailable.",
 		logo: Assets.FLStudio,
 		name: 'FL Studio',
 		category: 'av-production'
@@ -159,16 +161,34 @@ const items = [
 		slug: 'audacity',
 		color: 'yellow',
 		description:
-			"",
+			"Audacity is a free, open-source audio editing software that's user-friendly and feature-rich. I use Audacity primarily for recording and editing voiceovers, as it allows for multi-track editing, noise reduction, and various effects. It's an excellent tool for anyone looking to produce high-quality audio content. ",
 		logo: Assets.Audacity,
 		name: 'Audacity',
 		category: 'av-production'
 	}),
 	defineSkill({
+		slug: 'cpp',
+		color: '#3c5af0',
+		description:
+			"C++ is a powerful, general-purpose programming language that supports object-oriented programming. It's commonly used in software development, game programming, and systems engineering. Our school curriculum introduces us to the basics of C++, helping us grasp essential programming structures and problem-solving techniques.",
+		logo: Assets.Cpp,
+		name: 'C++',
+		category: 'programming-langs'
+	}),
+	defineSkill({
+		slug: 'python',
+		color: 'blue',
+		description:
+			"Python is a versatile, high-level programming language known for its clear syntax and readability. It's widely used in web development, data analysis, automation, and more. In school, we learn the fundamentals of Python, which lays the groundwork for understanding programming concepts and logic.",
+		logo: Assets.Python,
+		name: 'Python',
+		category: 'programming-langs'
+	}),
+	defineSkill({
 		slug: 'css',
 		color: 'blue',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			"Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.",
 		logo: Assets.CSS,
 		name: 'CSS',
 		category: 'markup-style'
@@ -177,11 +197,21 @@ const items = [
 		slug: 'html',
 		color: 'orange',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			"Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.",
 		logo: Assets.HTML,
 		name: 'HTML',
 		category: 'markup-style'
-	})
+	}),
+
+	defineSkill({
+		slug: 'diy',
+		color: 'green',
+		description:
+			"DIY electronics involves creating or modifying electronic devices using components like resistors, microcontrollers, and sensors. It's a hands-on way to explore how electronic systems work, fostering projects like building custom gadgets or home automation tools.",	
+		logo: Assets.Esp32,
+		name: 'DIY Electronics',
+		category: 'diy'
+	}),
 ] as const;
 
 const SkillsData = {

@@ -82,6 +82,8 @@ const Assets = {
 	FLStudio: asset('flstudio.ico'),
 	Audacity: asset('audacity.svg'),
 	Voiceover: asset('microphone.jpg'),
+	Code: asset('code.png'),
+	Obala: asset('gobala.jpg'),
 };
 
 export default Assets;
