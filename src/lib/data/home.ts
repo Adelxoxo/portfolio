@@ -16,6 +16,7 @@ const hero: {
 		{ label: 'GitHub', href: 'https://github.com/Adelxoxo', icon: 'i-carbon-logo-github' },
 		{ label: 'CastingCallClub', href: 'https://www.castingcall.club/VoiceoverHangover', icon: 'i-carbon-microphone-filled' },
 		{ label: 'IMDb', href: 'https://www.imdb.com/name/nm12230813/', icon: 'i-carbon-theater' },
+		{ label: 'YouTube', href: 'https://www.youtube.com/@slashedpixel', icon: 'i-carbon-logo-youtube' },
 		{ label: 'Email', href: 'mailto:adelkobic@gmail.com', icon: 'i-carbon-at' }
 	]
 };
