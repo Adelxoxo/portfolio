@@ -45,6 +45,7 @@ const config = {
         '/skills/css',
         '/skills/html',
         '/skills/diy',
+        '/skills/php',
         '/projects',
         '/projects/slick-portfolio-angular',  
         '/projects/slick-portfolio-svelte',  
