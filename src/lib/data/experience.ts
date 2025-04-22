@@ -13,7 +13,7 @@ const items: Array<Experience> = [
 		type: 'Software Development',
 		location: 'Sarajevo',
 		period: { from: new Date(2023, 2, 1) },
-		skills: getSkills('cpp', 'python', 'javascript', 'svelte', 'html', 'css'),
+		skills: getSkills('cpp', 'python', 'javascript', 'svelte', 'html', 'css', 'php', 'android'),
 		name: 'Software Development',
 		color: 'red',
 		links: [],

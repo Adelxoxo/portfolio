@@ -84,6 +84,8 @@ const Assets = {
 	Voiceover: asset('microphone.jpg'),
 	Code: asset('code.png'),
 	Obala: asset('gobala.jpg'),
+	Symfony: asset('symfony-badge-icon-lg.png'),
+	Php: asset('php.png')
 };
 
 export default Assets;

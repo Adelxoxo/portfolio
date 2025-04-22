@@ -212,6 +212,15 @@ const items = [
 		name: 'DIY Electronics',
 		category: 'diy'
 	}),
+	defineSkill({
+		slug: 'php',
+		color: 'blue',
+		description:
+			"PHP is a popular general-purpose scripting language that is especially suited to web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1993. The PHP reference implementation is now produced by The PHP Group.",
+		logo: Assets.Php,
+		name: 'PHP',
+		category: 'programming-langs'
+	}),
 ] as const;
 
 const SkillsData = {
